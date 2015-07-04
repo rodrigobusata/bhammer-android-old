@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="BTextView">
+        <attr name="maxSize" format="dimension" />
+    </declare-styleable>
+
+    <attr name="datePickerStyle" format="reference" />
+
+    <declare-styleable name="BDatePicker">
+        <attr name="dp_startYear" format="integer" />
+        <attr name="dp_endYear" format="integer" />
+        <attr name="dp_spinnersShown" format="boolean" />
+        <attr name="dp_calendarViewShown" format="boolean" />
+        <attr name="dp_minDate" format="string" />
+        <attr name="dp_maxDate" format="string" />
+        <attr name="dp_internalLayout" format="reference" />
+    </declare-styleable>
+
+    <attr name="numberPickerStyle" format="reference" />
+
+    <declare-styleable name="BNumberPicker">
+        <attr name="solidColor" format="color|reference" />
+        <attr name="selectionDivider" format="reference" />
+        <attr name="selectionDividerHeight" format="dimension" />
+        <attr name="selectionDividersDistance" format="dimension" />
+        <attr name="internalMinHeight" format="dimension" />
+        <attr name="internalMaxHeight" format="dimension" />
+        <attr name="internalMinWidth" format="dimension" />
+        <attr name="internalMaxWidth" format="dimension" />
+        <attr name="internalLayout" format="reference" />
+        <attr name="virtualButtonPressedDrawable" format="reference" />
+    </declare-styleable>
+
+    <attr name="timePickerStyle" format="reference" />
+
+    <!--MaterialEditText-->
+
+    <declare-styleable name="MaterialEditText">
+        <!-- The base color of the line and the texts. Default is black. -->
+        <attr name="met_baseColor" format="color" />
+        <!-- The highlight color of the line, and the floating label if the highlightFloatingLabel is true. -->
+        <attr name="met_primaryColor" format="color" />
+        <!-- How the floating label should be shown. Default is none -->
+        <attr name="met_floatingLabel">
+            <enum name="none" value="0" />
+            <enum name="normal" value="1" />
+            <enum name="highlight" value="2" />
+        </attr>
+        <!-- The color for when something is wrong.(e.g. exceeding max characters) -->
+        <attr name="met_errorColor" format="color" />
+        <!-- Min characters count limit. 0 means no limit. -->
+        <attr name="met_minCharacters" format="integer" />
+        <!-- max Characters count limit. 0 means no limit. -->
+        <attr name="met_maxCharacters" format="integer" />
+        <!-- Whether to show the bottom ellipsis in singleLine mode -->
+        <attr name="met_singleLineEllipsis" format="boolean" />
+        <!-- Reserved bottom mText lines count, no matter if there is some helper/error mText. -->
+        <attr name="met_minBottomTextLines" format="integer" />
+        <!-- Helper mText at the bottom -->
+        <attr name="met_helperText" format="string" />
+        <!-- Helper mText color -->
+        <attr name="met_helperTextColor" format="color" />
+        <!-- Font of the paint used to draw accent texts -->
+        <attr name="met_accentTypeface" format="string" />
+        <!-- Font used on view -->
+        <attr name="met_typeface" format="string" />
+        <!-- Custom float label mText -->
+        <attr name="met_floatingLabelText" format="string" />
+        <!-- spacing between the main mText and the floating label -->
+        <attr name="met_floatingLabelPadding" format="dimension" />
+        <!-- Hide underline -->
+        <attr name="met_hideUnderline" format="boolean" />
+        <!-- Underline's color -->
+        <attr name="met_underlineColor" format="color" />
+        <!-- Auto validate -->
+        <attr name="met_autoValidate" format="boolean" />
+        <!-- Left mIcon -->
+        <attr name="met_iconLeft" format="reference" />
+        <!-- Right mIcon -->
+        <attr name="met_iconRight" format="reference" />
+        <!-- Padding between mIcon(s) and the main area. 8dp by default. -->
+        <attr name="met_iconPadding" format="dimension" />
+        <!-- Clear button -->
+        <attr name="met_clearButton" format="boolean" />
+        <!-- The floating label's mText size. 12sp by default. -->
+        <attr name="met_floatingLabelTextSize" format="dimension" />
+        <!-- The floating label's mText color. -1 by default. -->
+        <attr name="met_floatingLabelTextColor" format="color" />
+        <!-- The bottom texts' size. 12sp by default. -->
+        <attr name="met_bottomTextSize" format="dimension" />
+        <!-- Always show the floating label, instead of animating it in/out. -->
+        <attr name="met_floatingLabelAlwaysShown" format="boolean" />
+        <!-- Always show the helper mText, no matter if the edit mText is focused. -->
+        <attr name="met_helperTextAlwaysShown" format="boolean" />
+        <!-- Whether use animation to show/hide the floating label -->
+        <attr name="met_floatingLabelAnimating" format="boolean" />
+        <!-- Text color -->
+        <attr name="met_textColor" format="color" />
+        <!-- Hint Text Color -->
+        <attr name="met_textColorHint" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+    <!--FAB-->
+
+    <declare-styleable name="FloatingActionButton">
+        <attr name="fab_colorPressed" format="color" />
+        <attr name="fab_colorDisabled" format="color" />
+        <attr name="fab_colorNormal" format="color" />
+        <attr name="fab_icon" format="reference" />
+        <attr name="fab_size" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="mini" value="1" />
+        </attr>
+        <attr name="fab_title" format="string" />
+        <attr name="fab_stroke_visible" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="AddFloatingActionButton">
+        <attr name="fab_plusIconColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="FloatingActionsMenu">
+        <attr name="fab_addButtonColorPressed" format="color" />
+        <attr name="fab_addButtonColorNormal" format="color" />
+        <attr name="fab_addButtonSize" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="mini" value="1" />
+        </attr>
+        <attr name="fab_addButtonPlusIconColor" format="color" />
+        <attr name="fab_addButtonStrokeVisible" format="boolean" />
+        <attr name="fab_labelStyle" format="reference" />
+        <attr name="fab_labelsPosition" format="enum">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+        <attr name="fab_expandDirection" format="enum">
+            <enum name="up" value="0" />
+            <enum name="down" value="1" />
+            <enum name="left" value="2" />
+            <enum name="right" value="3" />
+        </attr>
+    </declare-styleable>
+    <!--END-->
+</resources>

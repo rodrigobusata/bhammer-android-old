@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:orientation="horizontal"
+    android:gravity="center">
+
+    <LinearLayout android:id="@+id/pickers"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Month -->
+        <com.busata.bhammer.dialogs.BNumberPicker
+            android:id="@+id/month"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dip"
+            android:layout_marginRight="16dip"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            />
+
+        <!-- Day -->
+        <com.busata.bhammer.dialogs.BNumberPicker
+            android:id="@+id/day"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dip"
+            android:layout_marginRight="16dip"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            />
+
+        <!-- Year -->
+        <com.busata.bhammer.dialogs.BNumberPicker
+            android:id="@+id/year"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dip"
+            android:layout_marginRight="16dip"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            />
+
+    </LinearLayout>
+
+    <!-- calendar view -->
+    <CalendarView
+        android:id="@+id/calendar_view"
+        android:layout_width="245dip"
+        android:layout_height="280dip"
+        android:layout_marginLeft="16dip"
+        android:layout_marginRight="16dip"
+        android:layout_weight="1"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        />
+
+</LinearLayout>

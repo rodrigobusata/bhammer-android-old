@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="contentAll" type="id" />
+    <item name="tool_bar" type="id" />
+
+    <!-- Just adding these so I wont have to remove a lot of code from NumberPicker.java. -->
+    <item name="np__increment" type="id" />
+    <item name="np__decrement" type="id" />
+
+    <!--FAB-->
+    <item name="fab_expand_menu_button" type="id" />
+    <item name="fab_label" type="id" />
+    <!--END-->
+</resources>

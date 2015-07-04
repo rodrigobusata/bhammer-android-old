@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Bhammer" />
+
+    <style name="Bhammer.Button" parent="@android:style/Widget.Material.Button">
+        <item name="android:minWidth">@dimen/btn_min_width</item>
+        <item name="android:minHeight">@dimen/btn_min_height</item>
+        <item name="android:paddingLeft">@dimen/btn_padding</item>
+        <item name="android:paddingRight">@dimen/btn_padding</item>
+        <item name="android:layout_marginLeft">@dimen/btn_margin</item>
+        <item name="android:layout_marginRight">@dimen/btn_margin</item>
+        <item name="android:layout_marginBottom">@dimen/btn_margin_bottom</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="Snackbar.Text.Action">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/sb__action_text_color</item>
+        <item name="android:background">@drawable/sb__btn_bg</item>
+    </style>
+
+</resources>

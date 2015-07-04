@@ -1,0 +1,10 @@
+<com.busata.bhammer.dialogs.BLDatePicker
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/datePicker"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:calendarViewShown="false"
+    android:layout_centerHorizontal="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_marginTop="10dp" />

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/header"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/profile_header_height"
+    android:background="@color/primary_color"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/margin_drawer"
+    android:paddingRight="@dimen/margin_drawer"
+    android:paddingStart="@dimen/margin_drawer"
+    android:paddingEnd="@dimen/margin_drawer"
+    android:clickable="true">
+
+    <com.busata.bhammer.views.CircleImageView
+        android:src="@drawable/ic_profile"
+        android:layout_marginTop="@dimen/margin_top_image_profile_header"
+        android:layout_marginBottom="12dp"
+        android:layout_width="63dp"
+        android:layout_height="63dp"
+        android:id="@+id/profileImage"/>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/profileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_size_drawer"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/profileEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_size_drawer"
+            android:textStyle="normal"/>
+
+    </LinearLayout>
+
+</LinearLayout>

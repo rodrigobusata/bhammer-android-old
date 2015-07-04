@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="drawer_drawableSize">50dp</dimen>
+    <dimen name="drawer_barSize">18dp</dimen>
+    <dimen name="drawer_topBottomBarArrowSize">11dp</dimen>
+    <dimen name="drawer_thickness">2dp</dimen>
+    <dimen name="drawer_gapBetweenBars">3dp</dimen>
+    <dimen name="drawer_middleBarArrowSize">16dp</dimen>
+    <dimen name="tool_bar_height">56dp</dimen>
+
+    <!--Buttons-->
+    <dimen name="corner_radius">2dp</dimen>
+    <dimen name="btn_min_width">88dp</dimen>
+    <dimen name="btn_min_width_dialog">64dp</dimen>
+    <dimen name="btn_min_height">36dp</dimen>
+    <dimen name="btn_padding">8dp</dimen>
+    <dimen name="btn_margin">4dp</dimen>
+    <dimen name="btn_margin_bottom">10dp</dimen>
+    <dimen name="default_margin">5dp</dimen>
+    <dimen name="default_margin_10">10dp</dimen>
+    <!--END-->
+
+    <!--MaterialEditText-->
+    <dimen name="default_padding_top">8dp</dimen>
+    <dimen name="default_padding_bottom">8dp</dimen>
+    <dimen name="inner_padding_left">0dp</dimen>
+    <dimen name="inner_padding_right">0dp</dimen>
+    <dimen name="floating_label_text_size">12sp</dimen>
+    <dimen name="bottom_text_size">12sp</dimen>
+    <dimen name="inner_components_spacing">8dp</dimen>
+    <dimen name="bottom_ellipsis_height">4dp</dimen>
+
+
+    <!--MaterialDrawer-->
+    <dimen name="statusMargin">0dp</dimen>
+    <dimen name="userSpace">164dp</dimen>
+    <dimen name="photoMarginTop">16dp</dimen>
+    <!-- match_parent = -1dp / wrap_content = -2dp -->
+    <dimen name="drawerWidth">-1dp</dimen>
+    <dimen name="margin_drawer">16dp</dimen>
+    <dimen name="font_size_drawer">14sp</dimen>
+
+    <dimen name="padding_top_toolbar">0dp</dimen>
+    <dimen name="profile_header_height">148dp</dimen>
+    <dimen name="margin_top_image_profile_header">18dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!--FAB-->
+
+    <dimen name="fab_size_normal">56dp</dimen>
+    <dimen name="fab_size_mini">40dp</dimen>
+
+    <dimen name="fab_icon_size">24dp</dimen>
+
+    <dimen name="fab_plus_icon_size">14dp</dimen>
+    <dimen name="fab_plus_icon_stroke">2dp</dimen>
+
+    <dimen name="fab_shadow_offset">3dp</dimen>
+    <dimen name="fab_shadow_radius">9dp</dimen>
+
+    <dimen name="fab_stroke_width">1dp</dimen>
+
+    <dimen name="fab_actions_spacing">16dp</dimen>
+    <dimen name="fab_labels_margin">8dp</dimen>
+    <dimen name="divider_height">0.8dp</dimen>
+
+    <!--SNACBAR-->
+
+    <dimen name="sb__bg_corner_radius">0dp</dimen>
+    <dimen name="sb__offset">0dp</dimen>
+    <dimen name="sb__text_padding_bottom">14dp</dimen>
+    <dimen name="sb__text_padding_left">24dp</dimen>
+    <dimen name="sb__text_padding_top">14dp</dimen>
+    <dimen name="sb__text_padding_right">24dp</dimen>
+    <dimen name="sb__text_size">14sp</dimen>
+    <!--END-->
+
+
+
+    <dimen name="margin_hor_card">4dp</dimen>
+    <dimen name="margin_ver_card">0dp</dimen>
+    <dimen name="padding_item_list">16dp</dimen>
+    <dimen name="fab_scroll_threshold">4dp</dimen>
+    <!--END-->
+
+</resources>

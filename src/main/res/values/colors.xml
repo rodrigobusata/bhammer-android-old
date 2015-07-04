@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="primary_color">#009688</color>
+    <color name="primary_color_ap_80">#CC009688</color>
+    <color name="primary_color_dark">#00796B</color>
+    <color name="accent_color">#00BCD4</color>
+
+    <color name="colorPrimaryText">#212121</color>
+    <color name="colorSecondText">#777</color>
+
+    <color name="light_grey">#999999</color>
+    <color name="light_grey_alpha_30">#4D999999</color>
+    <color name="light_grey_alpha_50">#80999999</color>
+    <color name="divider_color">#D6D6D6</color>
+
+    <color name="drawer_color">#FFFFFF</color>
+    <color name="dark_grey">#1C1C1C</color>
+    <color name="text_color">#000000</color>
+    <color name="toast_back_color">#E6656565</color>
+    <color name="toast_text_color">#F5F5F5</color>
+
+    <!--Dialog-->
+    <color name="back_dialog">#FFF</color>
+    <color name="message_color">#212121</color>
+    <color name="tittle_color">#212121</color>
+    <color name="card_background">#FFF</color>
+    <color name="card_shadow">#10000000</color>
+    <color name="window_background">#00000000</color>
+    <!--END-->
+
+    <!--Buttons-->
+    <color name="flat_pressed">#66999999</color>
+    <color name="flat_disabled_text">#40000000</color>
+    <color name="flat_normal_text">#000000</color>
+    <color name="raised_pressed">#CC999999</color>
+    <color name="raised_disabled_text">#40000000</color>
+    <color name="raised_normal_text">#FFFFFF</color>
+    <!--END-->
+
+    <color name="fab_pressed">#66CCCCCC</color>
+    <color name="profile_back">#E3ECF5</color>
+    <color name="back_drawer">#F7F7F7</color>
+    <color name="black_semi_transparent">#B2000000</color>
+
+    <!--SNACKBAR-->
+    <color name="sb__background">#ff323232</color>
+    <color name="sb__text_color">#ffffffff</color>
+    <color name="sb__action_text_color">@color/accent_color</color>
+    <color name="sb__action_bg_color">#1affffff</color>
+    <!--END-->
+
+</resources>

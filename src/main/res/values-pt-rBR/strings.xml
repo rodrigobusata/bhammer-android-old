@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Bhammer</string>
+
+    <!--Pickers-->
+    <string name="date_picker_increment_month_button">Acrecentar mês</string>
+    <string name="date_picker_decrement_month_button">Decrementar mês</string>
+    <string name="date_picker_increment_day_button">Acrecentar dia</string>
+    <string name="date_picker_decrement_day_button">Decrementar dia</string>
+    <string name="date_picker_increment_year_button">Acrecentar ano</string>
+    <string name="date_picker_decrement_year_button">Decrementar ano</string>
+    <string name="ok">OK</string>
+
+    <string name="time_picker_dialog_title">Informar tempo</string>
+    <string name="date_picker_dialog_title">Informar data</string>
+    <string name="date_time_set">Informar</string>
+    <string name="date_time_done">Concluído</string>
+    <string name="cancel">Cancelar</string>
+
+    <string name="time_picker_increment_minute_button">Acrecentar minuto</string>
+    <string name="time_picker_decrement_minute_button">Decrementar minuto</string>
+    <string name="time_picker_increment_hour_button">Acrecentar hora</string>
+    <string name="time_picker_decrement_hour_button">Decrementar hora</string>
+    <string name="time_picker_increment_set_pm_button">Informar PM</string>
+    <string name="time_picker_decrement_set_am_button">Informar AM</string>
+    <string name="time_picker_separator">:</string>
+    <string name="what_is_bhammer">Bhammer é um Framework para facilitar a sua vida!</string>
+    <string name="title_activity_list_animations">ListAnimationsActivity</string>
+
+    <string name="action_settings">Configurações</string>
+    <!--END-->
+</resources>

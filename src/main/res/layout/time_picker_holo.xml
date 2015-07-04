@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_gravity="center_horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <!--android:layoutDirection="ltr"-->
+
+        <!-- hour -->
+        <com.busata.bhammer.dialogs.BNumberPicker
+            android:id="@+id/hour"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dip"
+            android:layout_marginBottom="16dip"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="6dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+        <!--android:layout_marginStart="16dip"
+        android:layout_marginEnd="6dip"-->
+
+        <!-- divider -->
+        <TextView
+            android:id="@+id/divider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:importantForAccessibility="no" />
+
+        <!-- minute -->
+        <com.busata.bhammer.dialogs.BNumberPicker
+            android:id="@+id/minute"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dip"
+            android:layout_marginBottom="16dip"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="8dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+        <!--android:layout_marginStart="6dip"
+        android:layout_marginEnd="8dip"-->
+
+        <!-- AM / PM -->
+        <com.busata.bhammer.dialogs.BNumberPicker
+            android:id="@+id/amPm"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dip"
+            android:layout_marginBottom="16dip"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="16dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+    </LinearLayout>
+
+</LinearLayout>

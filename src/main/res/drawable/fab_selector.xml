@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:left="8.5dp"
+        android:right="8.5dp"
+        android:bottom="11.5dp"
+        android:top="5.5dp">
+        <selector
+            android:exitFadeDuration="@android:integer/config_mediumAnimTime"
+            android:enterFadeDuration="@android:integer/config_mediumAnimTime">
+
+            <item
+                android:drawable="@drawable/fab_pressed"
+                android:state_pressed="true" />
+
+            <item android:drawable="@android:color/transparent" />
+
+        </selector>
+    </item>
+</layer-list>
