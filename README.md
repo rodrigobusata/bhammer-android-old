@@ -26,7 +26,7 @@
               The Framework is compliant with API 16 or higher.
 
 ### Demonstration
-              For whom do not trust the Framework potential, below some pictures of a demonstration of App created, or if you prefer to test yourself by install from [Google Play](https://play.google.com/store/apps/details?id=com.busata.bhammer_sample).
+              For whom do not trust the Framework potential, below some pictures of a demonstration of App created, or if you prefer to test yourself by install from [Google Play](https://play.google.com/store/apps/details?id=com.busata.bhammer_sample) or [acess sample app](https://github.com/rodrigobusata/bhammer-android-sample).
 
 ![](https://lh3.googleusercontent.com/0Ckp1C8lEwwHTXWpH_Re09FWmjrkZpa2HHkv_kPpgV20QFn7KIAF1xNZLex8-uqpnFll=h310-rw)
 ![](https://lh3.googleusercontent.com/Ys8VVhzwT0b-nmVWht7WjrgWLzZGAS_SeHLzdKxKiHyPz6OiOlSVcIDsTlVz2-blKz8=h310-rw)
