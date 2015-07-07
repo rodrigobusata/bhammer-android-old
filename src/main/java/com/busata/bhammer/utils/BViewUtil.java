@@ -14,7 +14,6 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.Transformation;
-import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -133,18 +132,18 @@ public class BViewUtil {
         return toast;
     }
 
-    public static void showNumberPicker(Activity activity, final EditText editText, int minValue, int maxValue) {
+    public static void showNumberPicker(Activity activity, final TextView textView, int minValue, int maxValue) {
         int value;
         try {
-            value = Integer.parseInt(editText.getText().toString());
+            value = Integer.parseInt(textView.getText().toString());
         } catch (NumberFormatException e) {
             value = -1;
             e.printStackTrace();
         }
-        showNumberPicker(activity, editText, minValue, maxValue, value);
+        showNumberPicker(activity, textView, minValue, maxValue, value);
     }
 
-    public static void showNumberPicker(Activity activity, final EditText editText, int minValue, int maxValue, int value) {
+    public static void showNumberPicker(Activity activity, final TextView textView, int minValue, int maxValue, int value) {
         final BDialog dialog = new BDialog(activity);
         LayoutInflater inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
@@ -154,6 +153,12 @@ public class BViewUtil {
         np.setMaxValue(maxValue);
         np.setWrapSelectorWheel(false);
         np.setValue(value);
+        np.setFormatter(new BNumberPicker.Formatter() {
+            @Override
+            public String format(int i) {
+                return String.format("%02d", i);
+            }
+        });
 
         dialog.addView(np)
                 .addButton(activity.getString(R.string.cancel), new View.OnClickListener() {
@@ -165,19 +170,19 @@ public class BViewUtil {
                 .addButton(activity.getString(R.string.ok), new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        editText.setText(String.valueOf(np.getValue()));
+                        textView.setText(String.format("%02d", Integer.parseInt(String.valueOf(np.getValue()))));
                         dialog.dismiss();
                     }
                 }, true).show();
 
     }
 
-    public static void showTimePicker(Context context, final EditText editText, final int type, final boolean is24Hours) {
-        showTimePicker(context, editText, type, is24Hours, false);
+    public static void showTimePicker(Context context, final TextView textView, final int type, final boolean is24Hours) {
+        showTimePicker(context, textView, type, is24Hours, false);
     }
 
-    public static void showTimePicker(Context context, final EditText editText, final int type, final boolean is24Hours, boolean forceOld) {
-        String value = editText.getText().toString();
+    public static void showTimePicker(Context context, final TextView textView, final int type, final boolean is24Hours, boolean forceOld) {
+        String value = textView.getText().toString();
         int hour = -1;
         int min = -1;
 
@@ -196,10 +201,10 @@ public class BViewUtil {
                 min = Integer.parseInt(items[1]);
             }
         }
-        showTimePicker(context, editText, type, is24Hours, hour, min, forceOld);
+        showTimePicker(context, textView, type, is24Hours, hour, min, forceOld);
     }
 
-    public static void showTimePicker(Context context, final EditText editText, final int type, final boolean is24Hours, int hour, int min, boolean forceOld) {
+    public static void showTimePicker(Context context, final TextView textView, final int type, final boolean is24Hours, int hour, int min, boolean forceOld) {
         final BDialog dialog = new BDialog(context);
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
@@ -227,14 +232,14 @@ public class BViewUtil {
 
                             switch (type) {
                                 case BTimePicker.HH_MM:
-                                    editText.setText(String.valueOf(BUtil.addZero(hour) + ":"
+                                    textView.setText(String.valueOf(BUtil.addZero(hour) + ":"
                                             + BUtil.addZero(tp.getCurrentMinute()) + amPm));
                                     break;
                                 case BTimePicker.HH:
-                                    editText.setText(String.valueOf(BUtil.addZero(hour) + amPm));
+                                    textView.setText(String.valueOf(BUtil.addZero(hour) + amPm));
                                     break;
                                 case BTimePicker.MM:
-                                    editText.setText(String.valueOf(BUtil.addZero(tp.getCurrentMinute())));
+                                    textView.setText(String.valueOf(BUtil.addZero(tp.getCurrentMinute())));
                                     break;
 
                             }
@@ -260,14 +265,14 @@ public class BViewUtil {
 
                             switch (type) {
                                 case BTimePicker.HH_MM:
-                                    editText.setText(String.valueOf(BUtil.addZero(hour) + ":"
+                                    textView.setText(String.valueOf(BUtil.addZero(hour) + ":"
                                             + BUtil.addZero(tp.getCurrentMinute()) + amPm));
                                     break;
                                 case BTimePicker.HH:
-                                    editText.setText(String.valueOf(BUtil.addZero(hour) + amPm));
+                                    textView.setText(String.valueOf(BUtil.addZero(hour) + amPm));
                                     break;
                                 case BTimePicker.MM:
-                                    editText.setText(String.valueOf(BUtil.addZero(tp.getCurrentMinute())));
+                                    textView.setText(String.valueOf(BUtil.addZero(tp.getCurrentMinute())));
                                     break;
 
                             }
@@ -277,16 +282,16 @@ public class BViewUtil {
         }
     }
 
-    public static void showDatePicker(Activity activity, final EditText editText, final int type) {
-        showDatePicker(activity, editText, type, false);
+    public static void showDatePicker(Activity activity, final TextView textView, final int type) {
+        showDatePicker(activity, textView, type, false);
     }
 
-    public static void showDatePicker(Activity activity, final EditText editText, final int type, boolean forceOld) {
+    public static void showDatePicker(Activity activity, final TextView textView, final int type, boolean forceOld) {
         int dd = -1;
         int mm = -1;
         int yyyy = -1;
 
-        String stringDate = editText.getText().toString();
+        String stringDate = textView.getText().toString();
         if (!stringDate.isEmpty()) {
             try {
                 if (type == BDatePicker.MM_YYYY) {
@@ -315,15 +320,15 @@ public class BViewUtil {
                 e.printStackTrace();
             }
         }
-        showDatePicker(activity, editText, type, dd, mm, yyyy, forceOld);
+        showDatePicker(activity, textView, type, dd, mm, yyyy, forceOld);
     }
 
     /**
      * @param activity A Activity atual
-     * @param editText O EditText que receberá o valor
+     * @param textView O EditText que receberá o valor
      * @param type     1 - DD/MM/AAAA, 2 - MM/AAAA, 3 - DD/MM, 4 - AAAA
      */
-    public static void showDatePicker(final Activity activity, final EditText editText, final int type, int dd, int mm, int yyyy, boolean forceOld) {
+    public static void showDatePicker(final Activity activity, final TextView textView, final int type, int dd, int mm, int yyyy, boolean forceOld) {
         final BDialog dialog = new BDialog(activity);
         dialog.setScrollVisible(false);
 
@@ -368,7 +373,7 @@ public class BViewUtil {
                                     break;
                             }
 
-                            editText.setText(data);
+                            textView.setText(data);
                             dialog.dismiss();
                         }
                     }, true).show();
@@ -406,7 +411,7 @@ public class BViewUtil {
                                     break;
                             }
 
-                            editText.setText(data);
+                            textView.setText(data);
                             dialog.dismiss();
                         }
                     }, true).show();
