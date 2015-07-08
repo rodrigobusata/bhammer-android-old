@@ -37,7 +37,7 @@
 
 
 ### Versions
-              Currently the Framework is version 1.0
+              Currently the Framework is version 1.0.1
 
 
 ### Libraries used
