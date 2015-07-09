@@ -8,6 +8,7 @@ import android.os.Build;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SwitchCompat;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -502,5 +503,76 @@ public class BViewUtil {
         bDialog.setOnlyView();
 
         return bDialog;
+    }
+
+
+    public static Animation changeTextSizeAnimation(final TextView textView, final int toSize,
+                                                    int duration) {
+        return changeTextSizeAnimation(textView, (int) textView.getTextSize(), toSize, duration);
+    }
+
+    /**
+     * Change TextView's TextSize with animation
+     *
+     * @param textView The TextView
+     * @param fromSize Current Size
+     * @param toSize   Future Size
+     * @param duration Duration
+     * @return Animation
+     */
+    public static Animation changeTextSizeAnimation(final TextView textView, final int fromSize,
+                                                    final int toSize, int duration) {
+        final boolean toMore = toSize > fromSize;
+        Animation anim = new Animation() {
+            @Override
+            protected void applyTransformation(float interpolatedTime, Transformation t) {
+                if (interpolatedTime == 1) textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, toSize);
+
+                else if (toMore) {
+                    int currentSize = (int) (toSize * interpolatedTime);
+                    textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, currentSize > fromSize ? currentSize : fromSize);
+
+                } else {
+                    int difference = fromSize - toSize;
+                    int currentSize = fromSize - (int) (difference * interpolatedTime);
+
+                    textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, currentSize < fromSize ? currentSize : fromSize);
+                }
+                textView.requestLayout();
+            }
+
+            @Override
+            public boolean willChangeBounds() {
+                return true;
+            }
+        };
+
+        anim.setDuration(duration);
+        return anim;
+    }
+
+    /**
+     * Chnage text color with animation
+     * @param context - Context
+     * @param textView  - The TextView
+     * @param fromColor - From color id
+     * @param toColor - To color Id
+     * @param duration - The duration
+     */
+
+    public static void changeTextColorAnim(Context context, final TextView textView, int fromColor, int toColor, int duration) {
+        ValueAnimator colorAnimation = ValueAnimator.ofObject(new ArgbEvaluator(),
+                context.getResources().getColor(fromColor),
+                context.getResources().getColor(toColor));
+        colorAnimation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+
+            @Override
+            public void onAnimationUpdate(ValueAnimator animator) {
+                textView.setTextColor((Integer) animator.getAnimatedValue());
+            }
+
+        });
+        colorAnimation.setDuration(duration);
+        colorAnimation.start();
     }
 }
