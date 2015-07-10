@@ -104,7 +104,7 @@ public class BDialog extends Dialog {
     public BDialog setMessage(String message) {
         mTvMessage.setText(message);
 
-        if (message.length() > 0) mTvMessage.setVisibility(View.VISIBLE);
+        if (message != null && message.length() > 0) mTvMessage.setVisibility(View.VISIBLE);
         else mTvMessage.setVisibility(View.GONE);
 
         return this;
