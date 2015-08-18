@@ -83,6 +83,7 @@
     <dimen name="margin_ver_card">0dp</dimen>
     <dimen name="padding_item_list">16dp</dimen>
     <dimen name="fab_scroll_threshold">4dp</dimen>
+    <dimen name="margin_fab">80dp</dimen>
     <!--END-->
 
 </resources>
