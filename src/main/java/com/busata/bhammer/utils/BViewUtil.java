@@ -14,8 +14,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.view.animation.Transformation;
 import android.widget.ProgressBar;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
@@ -26,6 +28,8 @@ import com.busata.bhammer.dialogs.BDialog;
 import com.busata.bhammer.dialogs.BLDatePicker;
 import com.busata.bhammer.dialogs.BNumberPicker;
 import com.busata.bhammer.dialogs.BTimePicker;
+import com.nineoldandroids.animation.AnimatorSet;
+import com.nineoldandroids.animation.ObjectAnimator;
 
 import java.text.DateFormat;
 import java.util.Calendar;
@@ -505,7 +509,6 @@ public class BViewUtil {
         return bDialog;
     }
 
-
     public static Animation changeTextSizeAnimation(final TextView textView, final int toSize,
                                                     int duration) {
         return changeTextSizeAnimation(textView, (int) textView.getTextSize(), toSize, duration);
@@ -574,5 +577,69 @@ public class BViewUtil {
         });
         colorAnimation.setDuration(duration);
         colorAnimation.start();
+
+    }
+
+    public static Animation showWithGrow(Context context, final View view) {
+        return showWithGrow(context, view, 500);
+    }
+
+    public static Animation showWithGrow(Context context, final View view, int duration) {
+        Animation anim = AnimationUtils.loadAnimation(context, R.anim.grow_in);
+        anim.setDuration(duration);
+        anim.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                view.setVisibility(View.VISIBLE);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+        return anim;
+    }
+
+    public static Animation hiddenWithGrow(Context context, final View view, final boolean isGone) {
+        return hiddenWithGrow(context, view, isGone, 500);
+    }
+
+    public static Animation hiddenWithGrow(Context context, final View view, final boolean isGone, int duration) {
+        Animation anim = AnimationUtils.loadAnimation(context, R.anim.grow_out);
+        anim.setDuration(duration);
+        anim.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                view.setVisibility(isGone ? View.GONE : View.INVISIBLE);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+        return anim;
+    }
+
+    public static void scroolToTop(ScrollView scrollView) {
+        int x = 0;
+        int y = 0;
+        ObjectAnimator xTranslate = ObjectAnimator.ofInt(scrollView, "scrollX", x);
+        ObjectAnimator yTranslate = ObjectAnimator.ofInt(scrollView, "scrollY", y);
+
+        AnimatorSet animators = new AnimatorSet();
+        animators.setDuration(1000L);
+        animators.playTogether(xTranslate, yTranslate);
+        animators.start();
     }
 }

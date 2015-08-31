@@ -38,6 +38,9 @@ public class BDatePicker extends FrameLayout {
     public static final int MM_YYYY = 2;
     public static final int DD_MM = 3;
     public static final int YYYY = 4;
+    public static final char DATE = 'd';
+    public static final char MONTH = 'M';
+    public static final char YEAR = 'y';
 
     private static final String LOG_TAG = BDatePicker.class.getSimpleName();
 
@@ -97,11 +100,11 @@ public class BDatePicker extends FrameLayout {
         /**
          * Called upon a date change.
          *
-         * @param view The view associated with this listener.
-         * @param year The year that was set.
+         * @param view        The view associated with this listener.
+         * @param year        The year that was set.
          * @param monthOfYear The month that was set (0-11) for compatibility
-         *            with {@link java.util.Calendar}.
-         * @param dayOfMonth The day of the month that was set.
+         *                    with {@link java.util.Calendar}.
+         * @param dayOfMonth  The day of the month that was set.
          */
         void onDateChanged(BDatePicker view, int year, int monthOfYear, int dayOfMonth);
     }
@@ -275,6 +278,7 @@ public class BDatePicker extends FrameLayout {
         }
         updateSpinners();
     }
+
     public long getMaxDate() {
         return mCalendarView.getMaxDate();
     }
@@ -362,7 +366,7 @@ public class BDatePicker extends FrameLayout {
      * @return The calendar view.
      * @see #getCalendarViewShown()
      */
-    public CalendarView getCalendarView () {
+    public CalendarView getCalendarView() {
         return mCalendarView;
     }
 
@@ -422,7 +426,7 @@ public class BDatePicker extends FrameLayout {
      * Gets a calendar for locale bootstrapped with the value of a given calendar.
      *
      * @param oldCalendar The old calendar.
-     * @param locale The locale.
+     * @param locale      The locale.
      */
     private Calendar getCalendarForLocale(Calendar oldCalendar, Locale locale) {
         if (oldCalendar == null) {
@@ -446,15 +450,15 @@ public class BDatePicker extends FrameLayout {
         final int spinnerCount = order.length;
         for (int i = 0; i < spinnerCount; i++) {
             switch (order[i]) {
-                case DateFormat.DATE:
+                case DATE:
                     mSpinners.addView(mDaySpinner);
                     setImeOptions(mDaySpinner, spinnerCount, i);
                     break;
-                case DateFormat.MONTH:
+                case MONTH:
                     mSpinners.addView(mMonthSpinner);
                     setImeOptions(mMonthSpinner, spinnerCount, i);
                     break;
-                case DateFormat.YEAR:
+                case YEAR:
                     mSpinners.addView(mYearSpinner);
                     setImeOptions(mYearSpinner, spinnerCount, i);
                     break;
@@ -467,8 +471,8 @@ public class BDatePicker extends FrameLayout {
     /**
      * Updates the current date.
      *
-     * @param year The year.
-     * @param month The month which is <strong>starting from zero</strong>.
+     * @param year       The year.
+     * @param month      The month which is <strong>starting from zero</strong>.
      * @param dayOfMonth The day of the month.
      */
     public void updateDate(int year, int month, int dayOfMonth) {
@@ -506,11 +510,11 @@ public class BDatePicker extends FrameLayout {
      * Initialize the state. If the provided values designate an inconsistent
      * date the values are normalized before updating the spinners.
      *
-     * @param year The initial year.
-     * @param monthOfYear The initial month <strong>starting from zero</strong>.
-     * @param dayOfMonth The initial day of the month.
+     * @param year                  The initial year.
+     * @param monthOfYear           The initial month <strong>starting from zero</strong>.
+     * @param dayOfMonth            The initial day of the month.
      * @param onDateChangedListener How user is notified date is changed by
-     *            user, can be null.
+     *                              user, can be null.
      */
     public void init(int year, int monthOfYear, int dayOfMonth,
                      OnDateChangedListener onDateChangedListener) {
@@ -637,7 +641,7 @@ public class BDatePicker extends FrameLayout {
     /**
      * Sets the IME options for a spinner based on its ordering.
      *
-     * @param spinner The spinner.
+     * @param spinner      The spinner.
      * @param spinnerCount The total spinner count.
      * @param spinnerIndex The index of the given spinner.
      */

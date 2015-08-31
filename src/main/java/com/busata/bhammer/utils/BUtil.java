@@ -12,9 +12,15 @@ import android.view.Display;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ProgressBar;
+import android.widget.ScrollView;
 
+import com.busata.bhammer.R;
 import com.busata.bhammer.dialogs.BDialog;
+import com.nineoldandroids.animation.AnimatorSet;
+import com.nineoldandroids.animation.ObjectAnimator;
 
 
 public class BUtil {
