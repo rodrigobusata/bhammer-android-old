@@ -1,5 +1,10 @@
 # Bhammer Framework for Android
 
+## DEPRECATED
+This lib is deprecated in favor of Google's [Design Support Library](http://developer.android.com/tools/support-library/features.html#design).
+
+Thanks for all your support!
+
 ### Description
               Bhammer is a Framework that does hard work for you, helping you in virtually all, especially in the look of your app. It was built using some of the best libraries available for Android. And because it is open source, it can be customized for you, then having the chance to win more resources, or being left only with what matters to your app.
 
